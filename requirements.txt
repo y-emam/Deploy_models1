@@ -1,0 +1,6 @@
+rembg
+numpy
+pillow
+tensorflow
+keras
+fastapi

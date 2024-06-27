@@ -1,39 +1,24 @@
 import io
-import pickle
 import dotenv
 import rembg
 import dotenv
 import numpy as np
 import PIL.Image
 import PIL.ImageOps
+import tensorflow as tf
 from keras.models import load_model
 from keras.preprocessing import image as keras_image
-from tensorflow.keras.preprocessing import image
-from datetime import datetime, time, timedelta
-from enum import Enum
-from typing import Literal, Union
-from uuid import UUID
+from tensorflow import image
+
 
 from fastapi import (
-    Body,
     FastAPI,
-    Query,
-    Path,
-    Cookie,
-    Header,
-    status,
-    Form,
     File,
     UploadFile,
 )
-from pydantic import BaseModel, Field, HttpUrl, EmailStr
-from starlette.responses import HTMLResponse
 
-from fastapi.middleware.cors import CORSMiddleware
 from keras.preprocessing import image as keras_image
-from ChatBotModel import ChatBotModel
 from getClassByIndex import getClassByIndex
-import matplotlib.pyplot as plt
 
 dotenv.load_dotenv()
 app = FastAPI()
